@@ -32,8 +32,7 @@ public class ContactRestController {
      // restService
     // the data is coverted which is present in the java pojo class is converted into json
     // this conversation is done by the internally spring, take help from jackson they will cobert the java pojo class to the json
-   @GetMapping("/getMessageBySta" +
-           "tus")
+   @GetMapping("/getMessageByStatus")
 //   @ResponseBody// get the data  and doest  recive the any view // commented because we are using restController , which is playes the both roles ResponseBody and controller
    public List<Contact> getMessageStatus(@RequestParam(name = "status") String status){
        return contactRepository.findByStatus(status);
