@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: eazyschool
+    env: docker
+    buildCommand: ./mvnw clean package -DskipTests
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: PORT
+        value: 10000
